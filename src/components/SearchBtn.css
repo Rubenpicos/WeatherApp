@@ -1,0 +1,24 @@
+.search__form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 4rem;
+}
+
+.search__input {
+  padding: 1rem;
+  font-size: 1rem;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  text-transform: uppercase;
+}
+
+.search__button {
+  display: flex;
+  cursor: pointer;
+  padding: 1rem;
+  font-size: 1rem;
+  margin: 1rem;
+  border-radius: 10%;
+  background-color: #eeaf61;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
