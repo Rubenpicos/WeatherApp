@@ -1,0 +1,24 @@
+html,
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+body {
+  background: linear-gradient(#849cfe, #abf1ff);
+}
+
+.container__title {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  max-width: 30%;
+  margin: 0 auto;
+  margin-top: 5rem;
+  font-size: 3rem;
+  text-transform: uppercase;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
