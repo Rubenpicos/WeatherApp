@@ -1,12 +1,13 @@
 import "./App.css";
-import SearchBtn from "./components/SearchBtn";
+
+import WeatherPanel from "./components/WeatherPanel";
 
 function App() {
   return (
     <>
       <section className="container">
         <h1 className="container__title">The weather app</h1>
-        <SearchBtn />
+        <WeatherPanel />
       </section>
     </>
   );

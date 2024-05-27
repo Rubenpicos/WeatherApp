@@ -1,10 +1,15 @@
 import { useState } from "react";
 import "./SearchBtn.css";
-const SearchBtn = () => {
+
+const SearchBtn = ({ newLocation }) => {
   const [city, SetCity] = useState("");
   const onSubmit = (e) => {
     e.preventDefault();
-    console.log({ city });
+    if (city === "" || !city) {
+      alert("Please, select a city");
+    }
+
+    newLocation(city);
   };
 
   return (
