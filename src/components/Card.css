@@ -1,0 +1,42 @@
+.weather__error {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 3rem;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  margin: auto;
+  margin-top: 2rem;
+  max-width: 90%;
+}
+
+.weather__container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  margin-top: 1rem;
+}
+
+.weather__content {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  text-transform: uppercase;
+  font-size: 1.5rem;
+}
+
+.weather__img {
+  margin-right: 2rem;
+}
+
+.weather__temperature {
+  display: flex;
+}
+
+.weather__error__message {
+  margin-top: -5rem;
+  font-size: 3rem;
+  background-color: #ccc;
+}
