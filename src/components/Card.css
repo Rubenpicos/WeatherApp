@@ -51,12 +51,5 @@
 }
 
 .weather__img {
-  margin-right: 3rem;
-  max-width: 25%; /* Ajusta este valor según sea necesario */
-}
-
-.weather__img img {
-  width: 100%;
-  height: auto;
-  max-width: 100%; /* Asegura que la imagen no sobrepase el ancho del contenedor */
+  margin-left: 8rem;
 }
