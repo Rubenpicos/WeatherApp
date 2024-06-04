@@ -28,15 +28,35 @@
 }
 
 .weather__img {
-  margin-right: 2rem;
+  margin-right: 3rem;
+}
+
+.weather__info-name {
+  margin: auto;
+  margin-top: 2rem;
 }
 
 .weather__temperature {
   display: flex;
 }
 
-.weather__error__message {
+.weather__error-message {
   margin-top: -5rem;
   font-size: 3rem;
   background-color: #ccc;
+}
+
+.weather__description {
+  margin-top: 6rem;
+}
+
+.weather__img {
+  margin-right: 3rem;
+  max-width: 25%; /* Ajusta este valor según sea necesario */
+}
+
+.weather__img img {
+  width: 100%;
+  height: auto;
+  max-width: 100%; /* Asegura que la imagen no sobrepase el ancho del contenedor */
 }

@@ -2,22 +2,23 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: 5rem;
+  margin-top: 3rem;
   max-width: 100%;
 }
 
 .search__input {
-  padding: 1rem;
-  font-size: 2rem;
+  padding: 0.5rem;
+  font-size: 1.2rem;
   font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
   text-transform: uppercase;
+  width: 25%;
 }
 
 .search__button {
   display: flex;
   cursor: pointer;
-  padding: 1rem;
-  font-size: 2rem;
+  padding: 0.5rem;
+  font-size: 1.2rem;
   margin: 1rem;
   border-radius: 10%;
   background-color: #eeaf61;
