@@ -11,7 +11,7 @@ const WeatherPanel = () => {
 
   const [weather, setWeather] = useState({});
   const [forecast, setForecast] = useState({});
-  const [show, setShow] = useState(false);
+  const [show, setShow] = useState(null);
 
   const getLocation = async (loc) => {
     const weatherUrl = urlWeatherBase + cityUrl + loc;
@@ -21,14 +21,18 @@ const WeatherPanel = () => {
       const weatherResponse = await fetch(weatherUrl);
       if (!weatherResponse.ok) throw new Error("Weather data fetch failed");
       const weatherData = await weatherResponse.json();
-      setWeather(weatherData);
 
-      const forecastResponse = await fetch(forecastUrl);
+      if (weatherData.cod && weatherData.cod !== "404") {
+        setWeather(weatherData);
 
-      const forecastData = await forecastResponse.json();
-      setForecast(forecastData);
+        const forecastResponse = await fetch(forecastUrl);
+        const forecastData = await forecastResponse.json();
+        setForecast(forecastData);
 
-      setShow(true);
+        setShow(true);
+      } else {
+        setShow(false);
+      }
     } catch (error) {
       console.error(error);
       setShow(false);
@@ -38,7 +42,9 @@ const WeatherPanel = () => {
   return (
     <>
       <SearchBtn newLocation={getLocation} />
-      <Card showData={show} weather={weather} forecast={forecast} />
+      {show !== null && (
+        <Card showData={show} weather={weather} forecast={forecast} />
+      )}
     </>
   );
 };

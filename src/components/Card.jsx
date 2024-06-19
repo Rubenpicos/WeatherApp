@@ -1,6 +1,6 @@
 import "./Card.css";
 import Weather from "../assets/Weather.jpg";
-import RobertoBrasero from "../assets/RobertoBrasero.jpg";
+
 const Card = ({ showData, weather }) => {
   const today = new Date();
   const day = today.getDate();
@@ -44,7 +44,6 @@ const Card = ({ showData, weather }) => {
         </div>
       ) : (
         <div className="weather__error">
-          <img src={RobertoBrasero} width={250}></img>
           <h2 className="weather__error-message">No results</h2>
         </div>
       )}
