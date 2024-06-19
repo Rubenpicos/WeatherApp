@@ -41,9 +41,10 @@
 }
 
 .weather__error-message {
-  margin-top: -5rem;
+  margin-top: 8rem;
   font-size: 3rem;
   background-color: #ccc;
+  text-transform: uppercase;
 }
 
 .weather__description {
