@@ -1,6 +1,7 @@
 import { useState } from "react";
 import SearchBtn from "./SearchBtn";
 import Card from "./Card";
+import CityImage from "./CityImage";
 
 const WeatherPanel = () => {
   const urlWeatherBase =
@@ -12,6 +13,7 @@ const WeatherPanel = () => {
   const [weather, setWeather] = useState({});
   const [forecast, setForecast] = useState({});
   const [show, setShow] = useState(null);
+  const [cityImage, setCityImage] = useState(null);
 
   const getLocation = async (loc) => {
     const weatherUrl = urlWeatherBase + cityUrl + loc;
@@ -29,6 +31,9 @@ const WeatherPanel = () => {
         const forecastData = await forecastResponse.json();
         setForecast(forecastData);
 
+        const imageUrl = await CityImage(loc);
+        setCityImage(imageUrl);
+
         setShow(true);
       } else {
         setShow(false);
@@ -43,7 +48,12 @@ const WeatherPanel = () => {
     <>
       <SearchBtn newLocation={getLocation} />
       {show !== null && (
-        <Card showData={show} weather={weather} forecast={forecast} />
+        <Card
+          showData={show}
+          weather={weather}
+          forecast={forecast}
+          cityImage={cityImage}
+        />
       )}
     </>
   );

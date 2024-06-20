@@ -1,12 +1,12 @@
 import "./Card.css";
 import Weather from "../assets/Weather.jpg";
 
-const Card = ({ showData, weather }) => {
+const Card = ({ showData, weather, cityImage }) => {
   const today = new Date();
   const day = today.getDate();
   const month = today.getMonth() + 1;
   const year = today.getFullYear();
-  const date = day + "/" + month + "/" + year;
+  const date = `${day}/${month}/${year}`;
 
   let url = "";
   let iconUrl = "";
@@ -21,7 +21,12 @@ const Card = ({ showData, weather }) => {
       {showData === true ? (
         <div className="weather__content">
           <div className="weather__img">
-            <img src={Weather} width={380} height={400} alt="Weather" />
+            <img
+              src={cityImage || Weather}
+              width={380}
+              height={400}
+              alt="City"
+            />
           </div>
           <article className="weather__info">
             <h2 className="weather__info-name">{weather.name}</h2>
@@ -35,10 +40,10 @@ const Card = ({ showData, weather }) => {
                 src={iconUrl}
                 width={90}
                 alt="Weather Icon"
-              />{" "}
+              />
             </div>
             <p className="weather__description">
-              <h2> {weather.weather[0].description} </h2>
+              <h2>{weather.weather[0].description}</h2>
             </p>
           </article>
         </div>
